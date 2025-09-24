@@ -56,7 +56,7 @@
 
 (defun aocel-solve (year day solution)
   "Solve the problem on YEAR and DAY with SOLUTION."
-  (let ((cookie (getenv "AOC_COOKIE"))
+  (let* ((cookie (getenv "AOC_COOKIE"))
         (url (format "https://adventofcode.com/%d/day/%d/input" year day))
         (url-request-method "GET")
         (url-request-extra-headers `(("Cookie" . ,cookie))))
